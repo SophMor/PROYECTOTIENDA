@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Tiendita</title>
+
+</h:head>
+<h:body>
+	<h:form>
+
+		<table align="center">
+			<tr>
+				<td><h:outputLabel value="TIPO COMERCIO" /></td>
+				<td><p:inputText placeholder="tipo Comercio"
+						value="#{tiendaBean.tipoComercio}" id="comercioInput"
+						required="true" size="20"
+						requiredMessage="Por favor, ingrese los datos correctos">
+
+
+					</p:inputText></td>
+				<td><h:messages for="comercioInput" /></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="NIT Tienda: " /></td>
+				<td><p:inputText placeholder="NIT" value="#{tiendaBean.NIT}"
+						id="nitINPUT" required="true" size="20"
+						requiredMessage="Por favor, ingrese los datos correctos">
+
+
+					</p:inputText></td>
+				<td><h:messages for="nitINPUT" /></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="Ciudad Tienda " /></td>
+				<td><p:inputText placeholder="ciudad"
+						value="#{tiendaBean.ciudad}" id="ciudadInput" required="true"
+						size="20" requiredMessage="Por favor, ingrese los datos correctos">
+
+
+					</p:inputText></td>
+				<td><h:messages for="ciudadInput" /></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="Valor IVA: %" /></td>
+				<td><p:inputText placeholder="IVA"
+						value="#{tiendaBean.valorIva}" id="ivaInput" required="true"
+						size="20" requiredMessage="Por favor, ingrese los datos correctos">
+
+						<!-- HACER VALIDACION DE 0 - 1  -->
+					</p:inputText></td>
+				<td><h:messages for="ivaInput" /></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="Tasa interés tienda : % " /></td>
+				<td><p:inputText placeholder="Tasa Interés"
+						value="#{tiendaBean.tasaInteres}" id="TasaInteresInput"
+						required="true" size="20"
+						requiredMessage="Por favor, ingrese los datos correctos">
+
+
+					</p:inputText></td>
+				<td><h:messages for="TasaInteresInput" /></td>
+			</tr>
+
+			<tr>
+				<td><h:outputLabel value="Nombre del banco cta cte: " /></td>
+				<td><p:inputText placeholder="Nombre banco"
+						value="#{tiendaBean.bancoCtaCorrte}" id="nombreBancoInput"
+						required="true" size="20"
+						requiredMessage="Por favor, ingrese los datos correctos">
+
+
+					</p:inputText></td>
+				<td><h:messages for="nombreBancoInput" /></td>
+			</tr>
+
+			<tr>
+				<td><h:outputLabel value="Número Cuenta Corriente " /></td>
+				<td><p:inputText placeholder="NÚMERO CUENTA"
+						value="#{tiendaBean.numeroCuentaCte}" id="NumeroCuentaInput"
+						required="true" size="20"
+						requiredMessage="Por favor, ingrese los datos correctos">
+
+
+					</p:inputText></td>
+				<td><h:messages for="NumeroCuentaInput" /></td>
+			</tr>
+
+			<tr>
+				<td><h:outputLabel value="Nombre gerente: " /></td>
+				<td><p:inputText placeholder="Nombre: "
+						value="#{tiendaBean.nombreGerente}" id="NombreGerenteInput"
+						required="true" size="20"
+						requiredMessage="Por favor, ingrese los datos correctos">
+
+
+					</p:inputText></td>
+				<td><h:messages for="NombreGerenteInput" /></td>
+			</tr>
+			<tr>
+				<td><h:commandButton value="modificar"
+						action="modificarTienda.xhtml" update="mensajes"></h:commandButton></td>
+				<td><h:messages id="mensajes" globalOnly="true" layout="table" />
+				</td>
+
+				<!--  El debe llevar a index -->
+				<td><h:commandButton value="aceptar"
+						action="modificarTienda.xhtml" update="mensajesAceptar"></h:commandButton></td>
+				<td><h:messages id="mensajesAceptar" globalOnly="true"
+						layout="table" /></td>
+			</tr>
+
+		</table>
+	</h:form>
+</h:body>
+</html>
