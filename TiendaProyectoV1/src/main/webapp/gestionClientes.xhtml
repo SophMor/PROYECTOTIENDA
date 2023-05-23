@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>Gestión cliente</title>
+</h:head>
+<h:body>
+	<h3>gestion</h3>
+	<h:form>
+		<!-- OJO FALTA VERIFICACIONES Y PONERLO LINDO  -->
+		<p:panel header="Gestión de Clientes" style="width:360px">
+			<h:outputLabel for="nombre" value="Nombre Completo:" />
+			<h:inputText value="#{clienteBean.nombrecompleto}"></h:inputText>
+			<h:outputLabel for="cedula" value="cedula" />
+			<h:inputText value="#{clienteBean.cedula}"></h:inputText>
+			<h:outputLabel for="direccion" value="Dirección:" />
+			<h:inputText value="#{clienteBean.direccion}"></h:inputText>
+			<h:outputLabel for="telefonoTx" value="Telefono:" />
+			<h:inputText value="#{clienteBean.telefono}"></h:inputText>
+			<h:outputLabel for="correoET" value="Correo Electrónico: " />
+			<h:inputText value="#{clienteBean.coreoelectronnico}"></h:inputText>
+
+			<f:facet name="footer">
+
+				<h:commandButton action="#{clienteBean.agregar}" value="Agregar"></h:commandButton>
+
+			</f:facet>
+		</p:panel>
+	</h:form>
+</h:body>
+</html>
